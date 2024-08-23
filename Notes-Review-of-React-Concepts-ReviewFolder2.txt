@@ -576,6 +576,55 @@ REVIEW FOLDER3 - Side Effects, Custom Hooks and Fragments
        of variables. If one of these variables changes, the function for the 
        side-effect is called. 
        
+       When is useEffect fires:
+         1. any changes to the dependency array will fire the useEffect hook
+         2. if dependency array is left out, the function in useEffect will fire on 
+            every render (initial render and update renders) of the component 
+         3. if the dependency array is empty array e.g [], the function is onlt called 
+            once when the component renders the first time
+         4. It can be triggered when the component is first mounted, but also if one of 
+            its values (state, props, derived values from state/props) is updated.
+
+            Read more about useEffect: 
+               https://www.robinwieruch.de/react-useeffect-hook/
+            Read more about localstorage: 
+               https://www.robinwieruch.de/local-storage-react/   - do the exercises
+
+          Question: What is useEffect in React?
+             Answer: useEffect is a hook in React that allows function components to 
+                  perform side effects.
+          Question: Can you use multiple useEffect hooks in one component?
+             Answer: Yes, you can use multiple useEffect hooks in a single component.
+
+          Question: What does the second argument in useEffect represent?
+             Answer: The second argument is an array of dependencies. The effect runs 
+             when any of these dependencies change.
+
+          Question: How do you run useEffect only once (on mount)?
+             Answer: Pass an empty dependency array ([]) as the second argument.
+
+          Question: Can useEffect return a cleanup function?
+             Answer: Yes, the function returned from useEffect serves as a cleanup function.
+
+          Question: What is the purpose of the cleanup function in useEffect?
+             Answer: It handles the cleanup or teardown of resources when the component 
+             unmounts or when the dependencies change.
+             
+          Question: How do you perform cleanup in useEffect for each render?
+             Answer: Return a function inside the useEffect with the cleanup logic.
+
+          Question: Can you conditionally run useEffect based on a certain condition?
+             Answer: Yes, you can use conditional statements inside useEffect to control when 
+             it should run.
+
+          Question: What happens if you omit the second argument in useEffect?
+              Answer: It runs the effect after every render, leading to potential performance 
+              issues.
+
+          Question: How does useEffect contribute to avoiding race conditions in React?
+             Answer: It allows you to handle asynchronous operations and avoid race conditions 
+             by managing the order of execution.      
+
 999. MEMOIZING
 - see C:\_AMyReactDev\chitoreactdev\_guijt-house-react-projects/house-8-forsale-react-async-search-with-delete-add-moize
 
