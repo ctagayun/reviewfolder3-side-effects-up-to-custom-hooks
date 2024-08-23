@@ -623,7 +623,9 @@ REVIEW FOLDER3 - Side Effects, Custom Hooks and Fragments
 
           Question: How does useEffect contribute to avoiding race conditions in React?
              Answer: It allows you to handle asynchronous operations and avoid race conditions 
-             by managing the order of execution.      
+             by managing the order of execution. 
+
+    4. React Custom Hooks (Advanced)     
 
 999. MEMOIZING
 - see C:\_AMyReactDev\chitoreactdev\_guijt-house-react-projects/house-8-forsale-react-async-search-with-delete-add-moize
